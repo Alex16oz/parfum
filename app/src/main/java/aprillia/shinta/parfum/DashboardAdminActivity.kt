@@ -4,11 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class DashboardAdminActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard_admin)
+
+        auth = FirebaseAuth.getInstance()
 
         val btnKelolaProduk: Button = findViewById(R.id.btnKelolaProduk)
         val btnKelolaPemesanan: Button = findViewById(R.id.btnKelolaPemesanan)
@@ -31,9 +37,10 @@ class DashboardAdminActivity : AppCompatActivity() {
             // TODO: startActivity(Intent(this, LaporanPenjualanActivity::class.java))
         }
 
-        // logout kembali ke dashboard (user)
+        // logout kembali ke halaman login
         btnLogout.setOnClickListener {
-            val intent = Intent(this, DashboardActivity::class.java)
+            auth.signOut()
+            val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()

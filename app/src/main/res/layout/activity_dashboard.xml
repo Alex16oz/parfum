@@ -6,12 +6,22 @@
     android:padding="24dp"
     tools:context=".DashboardActivity">
 
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp" />
+
     <LinearLayout
         android:id="@+id/dashboardContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:layout_below="@id/btnLogout"
         android:layout_marginTop="32dp">
 
         <TextView
