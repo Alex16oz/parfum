@@ -15,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
         val etUsername: EditText = findViewById(R.id.etUsername)
         val etPassword: EditText = findViewById(R.id.etPassword)
         val btnLogin: Button = findViewById(R.id.btnLogin)
+        val btnRegister: Button = findViewById(R.id.btnRegister)
 
         btnLogin.setOnClickListener {
             val username = etUsername.text.toString().trim()
@@ -29,6 +30,10 @@ class LoginActivity : AppCompatActivity() {
                 // ❌ Login gagal
                 Toast.makeText(this, "Username atau Password salah!", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        btnRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 }

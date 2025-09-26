@@ -13,9 +13,8 @@
         android:theme="@style/Theme.Parfum"
         tools:targetApi="31">
 
-        <!-- Dashboard sebagai Launcher (User) -->
         <activity
-            android:name=".DashboardActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -23,22 +22,19 @@
             </intent-filter>
         </activity>
 
-        <!-- Dashboard Admin -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".DashboardAdminActivity"
             android:exported="true" />
 
-        <!-- Login Activity -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
-
-        <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
 
-        <!-- Display Parfum -->
         <activity
             android:name=".DisplayParfumActivity"
             android:exported="true" />
@@ -47,6 +43,9 @@
             android:name=".KelolaProdukActivity"
             android:exported="true"/>
 
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
 
     </application>
 </manifest>

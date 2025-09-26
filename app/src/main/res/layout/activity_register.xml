@@ -6,13 +6,13 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/tvLoginTitle"
+        android:id="@+id/tvRegisterTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login Admin"
+        android:text="Register Admin"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp" />
@@ -34,16 +34,9 @@
         android:layout_marginBottom="24dp" />
 
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login" />
-
-    <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginTop="8dp"/>
+        android:text="Register" />
 
 </LinearLayout>
