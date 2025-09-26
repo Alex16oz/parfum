@@ -14,7 +14,6 @@ class DashboardActivity : AppCompatActivity() {
         val btnPemesanan: Button = findViewById(R.id.btnPemesanan)
         val btnDisplayParfum: Button = findViewById(R.id.btnDisplayParfum)
         val btnLaporan: Button = findViewById(R.id.btnLaporan)
-        val btnLogin: Button = findViewById(R.id.btnLogin)
 
         // buka form pemesanan (MainActivity yang sudah ada)
         btnPemesanan.setOnClickListener {
@@ -30,11 +29,6 @@ class DashboardActivity : AppCompatActivity() {
         btnLaporan.setOnClickListener {
             // sementara kosong, bisa tambahkan intent kalau sudah buat LaporanActivity
             // startActivity(Intent(this, LaporanActivity::class.java))
-        }
-
-        // buka login admin
-        btnLogin.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }
