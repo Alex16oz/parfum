@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".DashboardAdminActivity">
+
+    <!-- Tombol Logout di pojok kanan atas -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp" />
+
+    <!-- Konten dashboard admin -->
+    <LinearLayout
+        android:id="@+id/adminDashboardContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/btnLogout"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:id="@+id/tvDashboardAdminTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard Admin"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnKelolaProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kelola Produk"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnKelolaPemesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kelola Pemesanan"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnLaporanPenjualan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Laporan Penjualan"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+
+<resources>
+    <string name="app_name">parfum</string>
+
+<!-- Label input -->
+    <string name="hint_nama">Nama</string>
+    <string name="hint_nohp">No HP</string>
+    <string name="hint_alamat">Alamat</string>
+    <string name="hint_merek">Merek Parfum</string>
+    <string name="hint_ukuran">Ukuran</string>
+    <string name="hint_jumlah">Jumlah</string>
+
+<!-- Tombol -->
+    <string name="btn_insert">INSERT</string>
+    <string name="btn_update">UPDATE</string>
+    <string name="btn_delete">DELETE</string>
+
+<!-- Untuk RecyclerView row -->
+    <string name="label_nama">Nama: %1$s</string>
+    <string name="label_nohp">No HP: %1$s</string>
+    <string name="label_alamat">Alamat: %1$s</string>
+    <string name="label_merek">Merek Parfum: %1$s</string>
+    <string name="label_ukuran">Ukuran: %1$s</string>
+    <string name="label_jumlah">Jumlah: %1$d</string>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Form Tambah/Edit Produk -->
+    <EditText
+        android:id="@+id/etNamaProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Produk"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/etDeskripsiProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Deskripsi Produk"
+        android:minLines="2"
+        android:gravity="top"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/tvHargaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga: Rp 0"
+        android:layout_marginBottom="4dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarHarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="2000000"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etStokMl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Stok (ml)"
+        android:inputType="number"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
+
+    <!-- Upload Foto -->
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnUploadFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Foto"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnSimpanProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan Produk"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Daftar Produk -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProduk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

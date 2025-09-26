@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".DashboardActivity">
+
+    <!-- Tombol Login di pojok kanan atas -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp" />
+
+    <!-- Konten dashboard di bawahnya -->
+    <LinearLayout
+        android:id="@+id/dashboardContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:id="@+id/tvDashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Tombol baru: Lihat Produk -->
+        <Button
+            android:id="@+id/btnLihatProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lihat Produk"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnPemesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Form Pemesanan"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnDisplayParfum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lihat Pemesanan"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnLaporan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Laporan"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>
