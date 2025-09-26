@@ -34,8 +34,16 @@ class RegisterActivity : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Pengguna baru berhasil didaftarkan
-                        val intent = Intent(this, DashboardActivity::class.java)
+                        // Kirim email verifikasi
+                        auth.currentUser?.sendEmailVerification()
+                            ?.addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    Toast.makeText(this, "Pendaftaran berhasil. Silakan cek email Anda untuk verifikasi.", Toast.LENGTH_LONG).show()
+                                } else {
+                                    Toast.makeText(this, "Gagal mengirim email verifikasi.", Toast.LENGTH_SHORT).show()
+                                }
+                            }
+                        val intent = Intent(this, LoginActivity::class.java)
                         startActivity(intent)
                         finish()
                     } else {
